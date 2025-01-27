@@ -255,48 +255,48 @@ function printPattern(n) {
 
   // Pattern 14:
   // A
-  // A B
-  // A B C
-  // A B C D
-  // A B C D E
+  // AB
+  // ABC
+  // ABCD
+  // ABCDE
 
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   // ASCII value for A = 65
   //   for (let j = 65; j <= 65 + i; j++) {
-  //     str += `${String.fromCharCode(j)} `;
+  //     str += String.fromCharCode(j);
   //   }
   //   console.log(str);
   // }
 
   // Pattern 15:
-  // A B C D E 
-  // A B C D
-  // A B C
-  // A B
+  // ABCDE 
+  // ABCD
+  // ABC
+  // AB
   // A
 
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   // ASCII value for A = 65
   //   for (let j = 0; j < n - i; j++) {
-  //     str += `${String.fromCharCode(65 + j)} `;
+  //     str += String.fromCharCode(65 + j);
   //   }
   //   console.log(str);
   // }
 
   // Pattern 16:
   // A 
-  // B B
-  // C C C
-  // D D D D
-  // E E E E E
+  // BB
+  // CCC
+  // DDDD
+  // EEEEE
 
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   // ASCII value for A = 65
   //   for (let j = 0; j <= i; j++) {
-  //     str += `${String.fromCharCode(65 + i)} `;
+  //     str += String.fromCharCode(65 + i);
   //   }
   //   console.log(str);
   // }
@@ -314,7 +314,7 @@ function printPattern(n) {
   //     str += " ";
   //   }
   //   for (let k = 0; k <= i; k++) {
-  //     str += `${String.fromCharCode(65 + k)}`;
+  //     str += String.fromCharCode(65 + k);
   //   }
   //   for (let l = i; l >= 1; l--) {
   //     str += String.fromCharCode(65 + l - 1);
@@ -335,7 +335,7 @@ function printPattern(n) {
   // for (let i = 0; i < n; i++) {
   //   let str = ""
   //   for (let k = 0; k <= i; k++) {
-  //     str += String.fromCharCode(65 + n - 1 - i + k);
+  //     str += String.fromCharCode(65 + n - 1 - i + k) + " ";
   //   }
   //   console.log(str);
   // }
