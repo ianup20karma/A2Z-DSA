@@ -7,6 +7,9 @@ function printPattern(n) {
   // * * * * *
   // * * * * *
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   for (let j = 0; j < n; j++) {
@@ -21,6 +24,9 @@ function printPattern(n) {
   // * * *
   // * * * *
   // * * * * *
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 0; i < n; i++) {
   //   let str = "";
@@ -37,6 +43,9 @@ function printPattern(n) {
   // 1 2 3 4
   // 1 2 3 4 5
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(1)
+
   // for (let i = 1; i <= n; i++) {
   //   let str = "";
   //   for (let j = 1; j <= i; j++) {
@@ -51,6 +60,9 @@ function printPattern(n) {
   // 3 3 3
   // 4 4 4 4
   // 5 5 5 5 5
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 1; i <= n; i++) {
   //   let str = "";
@@ -67,6 +79,9 @@ function printPattern(n) {
   // * * 
   // * 
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(1)
+
   // for (let i = 1; i <= n; i++) {
   //   let str = ""
   //   for (let j = 0; j < (n - i + 1); j++) {
@@ -82,6 +97,9 @@ function printPattern(n) {
   // 1 2 
   // 1
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(1)
+
   // for (let i = 1; i <= n; i++) {
   //   let str = ""
   //   for (let j = 1; j <= (n - i + 1); j++) {
@@ -96,6 +114,9 @@ function printPattern(n) {
   //   *****
   //  *******
   // *********
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 0; i < n; i++) {
   //   let str = ""
@@ -117,6 +138,9 @@ function printPattern(n) {
   //   *****
   //    ***
   //     *
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 0; i < n; i++) {
   //   let str = ""
@@ -143,6 +167,9 @@ function printPattern(n) {
   //   *****
   //    ***
   //     *
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // ERECT PYRAMID
   // for (let i = 0; i < n; i++) {
@@ -185,6 +212,9 @@ function printPattern(n) {
   // **
   // *
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 1; i <= 2 * n - 1; i++) {
   //   let str = "";
   //   let star = i > n ? (2 * n - i) : i;
@@ -204,6 +234,9 @@ function printPattern(n) {
   // 0 1 0 1 
   // 1 0 1 0 1 
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   let num = i % 2 == 0 ? 1 : 0;
@@ -220,6 +253,9 @@ function printPattern(n) {
   // 123    321
   // 1234  4321
   // 1234554321
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 1; i <= n; i++) {
   //   let str = "";
@@ -243,6 +279,9 @@ function printPattern(n) {
   // 7  8  9  10
   // 11  12  13  14  15
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // let num = 1;
   // for (let i = 0; i < n; i++) {
   //   let str = "";
@@ -260,6 +299,9 @@ function printPattern(n) {
   // ABCD
   // ABCDE
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   // ASCII value for A = 65
@@ -275,6 +317,9 @@ function printPattern(n) {
   // ABC
   // AB
   // A
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(1)
 
   // for (let i = 0; i < n; i++) {
   //   let str = "";
@@ -292,6 +337,9 @@ function printPattern(n) {
   // DDDD
   // EEEEE
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 0; i < n; i++) {
   //   let str = "";
   //   // ASCII value for A = 65
@@ -307,6 +355,9 @@ function printPattern(n) {
   //   ABCBA
   //  ABCDCBA
   // ABCDEDCBA
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 0; i < n; i++) {
   //   let str = ""
@@ -332,6 +383,9 @@ function printPattern(n) {
   // BCDE
   // ABCDE
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 0; i < n; i++) {
   //   let str = ""
   //   for (let k = 0; k <= i; k++) {
@@ -351,6 +405,9 @@ function printPattern(n) {
   // ***    ***
   // ****  ****
   // **********
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 0; i < 2 * n; i++) {
   //   let str = "";
@@ -379,6 +436,9 @@ function printPattern(n) {
   // **      **
   // *        *
 
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
   // for (let i = 1; i <= 2 * n - 1; i++) {
   //   let str = "";
   //   let star = i > n ? (2 * n - i) : i;
@@ -402,6 +462,9 @@ function printPattern(n) {
   // *    *
   // *    *
   // ******
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
 
   // for (let i = 1; i <= n; i++) {
   //   let str = "";
@@ -431,6 +494,30 @@ function printPattern(n) {
   // 6 5 4 4 4 4 4 4 4 5 6 
   // 6 5 5 5 5 5 5 5 5 5 6 
   // 6 6 6 6 6 6 6 6 6 6 6
+
+  // TIME COMPLEXITY: O(n^2)
+  // SPACE COMPLEXITY: O(n)
+
+  for (let i = 0; i < 2 * n - 1; i++) {
+    // Initialize an empty string for the current row
+    let row = "";
+
+    // Inner loop for the number of columns
+    for (let j = 0; j < 2 * n - 1; j++) {
+
+      // Initialize the top, bottom, left, and right indices of a cell
+      let top = i;
+      let bottom = j;
+      let right = (2 * n - 2) - j;
+      let left = (2 * n - 2) - i;
+
+      // Find the minimum of the 4 directions and subtract it from `n`
+      row += (n - Math.min(top, bottom, left, right)) + " ";
+    }
+
+    // Print the current row
+    console.log(row.trim());
+  }
 }
 
 const input = 6;
