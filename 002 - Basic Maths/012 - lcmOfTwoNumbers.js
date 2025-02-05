@@ -26,3 +26,8 @@ function LCM(n1, n2) {
 
     return lcm;
 }
+
+const input1 = 3;
+const input2 = 5;
+const result = LCM(input1, input2);
+console.log(`LCM of ${input1} & ${input2} is ${result}`);

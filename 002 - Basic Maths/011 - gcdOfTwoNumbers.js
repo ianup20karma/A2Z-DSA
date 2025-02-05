@@ -23,5 +23,5 @@ function GCD(n1, n2) {
 
 const input1 = 4;
 const input2 = 6;
-const result = primeUptoN(input1, input2);
+const result = GCD(input1, input2);
 console.log(`GCD of ${input1} & ${input2} is ${result}`);
