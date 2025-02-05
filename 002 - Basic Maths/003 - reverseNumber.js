@@ -6,6 +6,8 @@
 // Input: n = 123
 // Output: 321
 
+// TIME COMPLEXITY: O(d) - d is the number of digits
+// SPACE COMPLEXITY: O(1)
 function reverseNumber(n) {
     let num = Math.abs(n);
     let sum = 0;
@@ -18,6 +20,6 @@ function reverseNumber(n) {
     return n < 0 ? -sum : sum;
 }
 
-const inputForReverseNumber = 56721;
-const reverseNumberResult = reverseNumber(inputForReverseNumber);
-console.log(`Reverse of ${inputForReverseNumber} -`, reverseNumberResult);
+const input = 56721;
+const result = reverseNumber(input);
+console.log(`Reverse of ${input} -`, result);

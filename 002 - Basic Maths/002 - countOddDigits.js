@@ -7,6 +7,8 @@
 // Input: n = 56721
 // Output: 3
 
+// TIME COMPLEXITY: O(d) - d is the number of digits
+// SPACE COMPLEXITY: O(1)
 function countOddDigit(n) {
     n = Math.abs(n);
     if (n == 0) return 1;
@@ -21,6 +23,6 @@ function countOddDigit(n) {
     return count;
 }
 
-const inputForCountOddDigit = 56721;
-const countOddDigitResult = countOddDigit(inputForCountOddDigit);
-console.log(`Odd Digits in ${inputForCountOddDigit} -`, countOddDigitResult);
+const input = 56721;
+const result = countOddDigit(input);
+console.log(`Odd Digits in ${input} -`, result);

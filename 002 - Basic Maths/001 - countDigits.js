@@ -7,6 +7,8 @@
 // Input: n = 56721
 // Output: 5
 
+// TIME COMPLEXITY: O(log n)
+// SPACE COMPLEXITY: O(1)
 function countDigit(n) {
     n = Math.abs(n);
     if (n == 0) return 1;
@@ -20,6 +22,6 @@ function countDigit(n) {
     return count;
 }
 
-const inputForCountDigit = 56721;
-const countDigitResult = countDigit(inputForCountDigit);
-console.log(`Total Digits in ${inputForCountDigit} -`, countDigitResult);
+const input = 56721;
+const result = countDigit(inputForCountDigit);
+console.log(`Total Digits in ${inputForCountDigit} -`, result);
