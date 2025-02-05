@@ -8,7 +8,19 @@
 // Explanation: The highest frequency is 3 (element 3), and the lowest frequency is 1 (element 1). Their sum is 3 + 1 = 4.
 
 function sumHighestAndLowestFrequency(nums) {
+    let frequencies = {};
+    let maxFreq = 1, minFreq = nums.length;
 
+    for (let i = 0; i < nums.length; i++) {
+        frequencies[nums[i]] = (frequencies[nums[i]] || 0) + 1;
+    }
+
+    for (let freq of Object.values(frequencies)) {
+        maxFreq = Math.max(maxFreq, freq);
+        minFreq = Math.min(minFreq, freq);
+    }
+
+    return maxFreq + minFreq;
 }
 
 const input = [4, 4, 5, 5, 6, 7];

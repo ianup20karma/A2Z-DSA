@@ -9,7 +9,22 @@
 // Explanation: Both 4 and 5 appear twice, but 4 is smaller. So, 4 is the most frequent element.
 
 function mostFrequentElement(nums) {
+    let freq = {};
+    let maxFreq = 0, maxElement = 0;
 
+    for (let i = 0; i < nums.length; i++) {
+        freq[nums[i]] = (freq[nums[i]] || 0) + 1;
+        let count = freq[nums[i]];
+
+        if (count > maxFreq) {
+            maxFreq = count;
+            maxElement = nums[i];
+        } else if (count == maxFreq) {
+            maxElement = Math.min(maxElement, nums[i]);
+        }
+    }
+
+    return maxElement;
 }
 
 const input = [4, 4, 5, 5, 6];
