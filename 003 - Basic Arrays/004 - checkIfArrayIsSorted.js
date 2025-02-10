@@ -8,6 +8,8 @@
 // Output: True
 // Explanation: The given array is sorted i.e Every element in the array is smaller than or equals to its next values, So the answer is True.
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(1)
 function arraySortedOrNot(arr, n) {
     for (let i = 0; i < n - 1; i++) {
         if (arr[i] > arr[i + 1]) {

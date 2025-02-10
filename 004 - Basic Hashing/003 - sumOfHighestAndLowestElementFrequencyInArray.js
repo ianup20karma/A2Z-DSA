@@ -7,6 +7,8 @@
 // Output: 4
 // Explanation: The highest frequency is 3 (element 3), and the lowest frequency is 1 (element 1). Their sum is 3 + 1 = 4.
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(n)
 function sumHighestAndLowestFrequency(nums) {
     let frequencies = {};
     let maxFreq = 1, minFreq = nums.length;

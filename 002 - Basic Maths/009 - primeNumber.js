@@ -8,19 +8,22 @@
 // Output: true
 // Explanation: The only divisors of 5 are 1 and 5 , So the number 5 is prime.
 
-// TIME COMPLEXITY: O(n)
+// TIME COMPLEXITY: O(sqrt(n))
 // SPACE COMPLEXITY: O(1)
 function isPrime(n) {
-    if (n < 2) return false;
+    if(n < 2) return false;
 
-    let result = true;
-    for (let i = 2; i < n; i++) {
-        if (n % i == 0) {
-            result = false;
-            break;
+    let count = 0;
+    for (let i = 1; i <= Math.sqrt(n); ++i) {
+        if (n % i === 0) {
+            count = count + 1;
+            if (n / i !== i) {
+                count = count + 1;
+            }
         }
     }
-    return result;
+
+    return count === 2;
 }
 
 const input = 5;

@@ -8,6 +8,8 @@
 // Output: 4
 // Explanation: Both 4 and 5 appear twice, but 4 is smaller. So, 4 is the most frequent element.
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(n)
 function mostFrequentElement(nums) {
     let freq = {};
     let maxFreq = 0, maxElement = 0;

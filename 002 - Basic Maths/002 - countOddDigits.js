@@ -10,7 +10,6 @@
 // TIME COMPLEXITY: O(d) - d is the number of digits
 // SPACE COMPLEXITY: O(1)
 function countOddDigit(n) {
-    n = Math.abs(n);
     if (n == 0) return 1;
 
     let count = 0;

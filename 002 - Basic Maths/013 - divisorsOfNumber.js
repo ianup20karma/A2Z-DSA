@@ -8,12 +8,23 @@
 // Output: [1, 2, 4, 8]
 // Explanation: The divisors of 8 are 1, 2, 4, 8.
 
+// Iterating sqrt(n) times, and performing constant time operations in each pass
+// Sorting the list of divisors takes O(k*Log(k))
+// TIME COMPLEXITY: O(sqrt(n)) + O(k*Log(k))
+// SPACE COMPLEXITY: O(1)
 function divisors(n) {
-    const resultantDivisors = [];
-    for (let i = 1; i <= n; i++) {
-        n % i === 0 && resultantDivisors.push(i)
+    const ans = [];
+    const sqrtN = Math.floor(Math.sqrt(n));
+
+    for(let i = 1; i <= sqrtN; i++) {
+        if(n % i === 0) {
+            ans.push(i);
+            if(i !== n / i) ans.push(n / i);
+        }
     }
-    return resultantDivisors;
+
+    ans.sort((a, b) => a - b);
+    return ans;
 }
 
 const input = 8;

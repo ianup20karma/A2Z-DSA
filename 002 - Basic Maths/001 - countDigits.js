@@ -10,7 +10,6 @@
 // TIME COMPLEXITY: O(log n)
 // SPACE COMPLEXITY: O(1)
 function countDigit(n) {
-    n = Math.abs(n);
     if (n == 0) return 1;
 
     let count = 0;
@@ -18,6 +17,9 @@ function countDigit(n) {
         n = Math.floor(n / 10);
         count += 1;
     }
+
+    // OR (Faster - O(1))
+    // let count = Math.floor(Math.log10(n) + 1);
 
     return count;
 }

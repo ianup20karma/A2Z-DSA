@@ -14,15 +14,14 @@
 // SPACE COMPLEXITY: O(1)
 function isPalindrome(n) {
     const reverseNumber = (n) => {
-        let num = Math.abs(n);
         let reverseNum = 0;
-        while (num > 0) {
-            const lastDigit = num % 10;
+        while (n > 0) {
+            const lastDigit = n % 10;
             reverseNum = reverseNum * 10 + lastDigit;
-            num = Math.floor(num / 10);
+            n = Math.floor(n / 10);
         }
 
-        return n < 0 ? -reverseNum : reverseNum;
+        return reverseNum;
     };
 
     return n == reverseNumber(n);

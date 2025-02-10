@@ -9,15 +9,14 @@
 // TIME COMPLEXITY: O(d) - d is the number of digits
 // SPACE COMPLEXITY: O(1)
 function reverseNumber(n) {
-    let num = Math.abs(n);
-    let sum = 0;
-    while (num > 0) {
-        const lastDigit = num % 10;
-        sum = sum * 10 + lastDigit;
-        num = Math.floor(num / 10);
+    let reverseNum = 0;
+    while (n > 0) {
+        const lastDigit = n % 10;
+        reverseNum = reverseNum * 10 + lastDigit;
+        n = Math.floor(n / 10);
     }
 
-    return n < 0 ? -sum : sum;
+    return reverseNum;
 }
 
 const input = 56721;

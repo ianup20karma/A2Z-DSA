@@ -9,7 +9,6 @@
 // TIME COMPLEXITY: O(d) - d is the number of digits
 // SPACE COMPLEXITY: O(1)
 function largestDigit(n) {
-    n = Math.abs(n);
     if (n == 0) return 0;
 
     let maxDigit = 0;

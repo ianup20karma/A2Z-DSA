@@ -9,14 +9,22 @@
 // Explanation: Proper divisors of 6 are 1, 2, 3.
 // 1 + 2 + 3 = 6.
 
-// TIME COMPLEXITY: O(n)
+// TIME COMPLEXITY: O(sqrt(n))
 // SPACE COMPLEXITY: O(1)
 function isPerfect(n) {
+    if(n === 1) return false;
+
     let sum = 0;
-    for (let i = 1; i < n; i++) {
-        sum += n % i == 0 ? i : 0;
+    for (let i = 1; i <= Math.sqrt(n); ++i) {
+        if (n % i === 0) {
+            sum = sum + i;
+            if (n / i !== n && i !== n / i) {
+                sum = sum + (n / i);
+            }
+        }
     }
-    return n == sum;
+
+    return sum === n;
 }
 
 const input = 6;

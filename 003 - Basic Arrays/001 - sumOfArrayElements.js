@@ -7,6 +7,8 @@
 // Output: 15
 // Explanation: Sum of all the elements is 1+2+3+4+5 = 15
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(1)
 function sumOfElements(arr, n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {

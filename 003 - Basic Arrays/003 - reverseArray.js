@@ -7,6 +7,8 @@
 // Output: [5,4,3,2,1]
 // Explanation: The reverse of the array [1,2,3,4,5] is [5,4,3,2,1]
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(1)
 function reverse(arr, n) {
     const reversedArray = [];
     for (let i = n - 1; i >= 0; i--) {

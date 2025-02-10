@@ -9,16 +9,16 @@
 // Explanation: Divisors of n1 = 1, 2, 4, Divisors of n2 = 1, 2, 3, 6
 // Greatest Common divisor = 2.
 
+// TIME COMPLEXITY: O(log(min(n1, n2)))
+// SPACE COMPLEXITY: O(1)
 function GCD(n1, n2) {
-    let gcd = 1;
-
-    for (let i = 1; i <= Math.min(n1, n2); i++) {
-        if (n1 % i === 0 && n2 % i === 0) {
-            gcd = i;
-        }
+    while (n1 > 0 && n2 > 0) {
+        if (n1 > n2) { n1 = n1 % n2; } 
+        else { n2 = n2 % n1; }
     }
 
-    return gcd;
+    if (n1 === 0) return n2;
+    return n1;
 }
 
 const input1 = 4;

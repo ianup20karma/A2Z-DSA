@@ -7,6 +7,8 @@
 // Output: 3
 // Explanation: The three odd elements are (1,3,5).
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(1)
 function countOdd(arr, n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {

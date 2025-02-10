@@ -9,6 +9,8 @@
 // Output: 6
 // Explanation: Both 6 and 7 appear second most times, but 6 is smaller.
 
+// TIME COMPLEXITY: O(n)
+// SPACE COMPLEXITY: O(n)
 function secondMostFrequentElement(nums) {
     let freq = {};
     let maxFreq = -1, maxElement = -1;
