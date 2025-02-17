@@ -46,7 +46,7 @@ function quickSort(nums) {
 
 const input = [7, 4, 1, 5, 3];
 const result = quickSort(input);
-console.log(`Sorted Array using Bubble Sort - [${result}]`);
+console.log(`Sorted Array using Quick Sort - [${result}]`);
 
 
 // INTERVIEW FOLLOW UP QUESTIONS:

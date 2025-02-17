@@ -35,7 +35,7 @@ function insertionSort(nums) {
 
 const input = [7, 4, 1, 5, 3];
 const result = insertionSort(input);
-console.log(`Sorted Array using Bubble Sort - [${result}]`);
+console.log(`Sorted Array using Insertion Sort - [${result}]`);
 
 
 // INTERVIEW FOLLOW UP QUESTIONS:
