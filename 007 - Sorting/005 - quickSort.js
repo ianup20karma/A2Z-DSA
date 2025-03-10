@@ -42,6 +42,27 @@
     // Worst Case - O(n^2) - when the pivot is the greatest or smallest element of the array
 // SPACE COMPLEXITY: O(1) + O(n) auxiliary stack space
 function quickSort(nums) {
+    const partition= (arr, low, high) => {
+        let pivot = arr[low], i = low, j = high;
+        while (i < j) {
+            while (arr[i] <= pivot && i <= high - 1) i++;
+            while (arr[j] > pivot && j >= low + 1) j--;
+            if (i < j) [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        [arr[low], arr[j]] = [arr[j], arr[low]];
+        return j;
+    }
+
+    const quickSortHelper = (arr, low, high) => {
+        if (low < high) {
+            let pIndex = partition(arr, low, high);
+            quickSortHelper(arr, low, pIndex - 1);
+            quickSortHelper(arr, pIndex + 1, high);
+        }
+    }
+
+    quickSortHelper(nums, 0, nums.length - 1);
+    return nums;
 }
 
 const input = [7, 4, 1, 5, 3];

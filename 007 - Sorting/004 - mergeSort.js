@@ -39,6 +39,27 @@
 // TIME COMPLEXITY: O(nlogn) - at each step, we divide the whole array, which takes logn steps, and we assume n steps are taken to sort the array
 // SPACE COMPLEXITY: O(n) - we are using a temporary array to store elements in sorted order.
 function mergeSort(nums) {
+    const merge = (arr, low, mid, high) => {
+        let temp = [], left = low, right = mid + 1;
+        while (left <= mid && right <= high) temp.push(arr[left] <= arr[right] ? arr[left++] : arr[right++]);
+
+        while (left <= mid) temp.push(arr[left++]);
+        while (right <= high) temp.push(arr[right++]);
+
+        for (let i = low; i <= high; i++) arr[i] = temp[i - low];
+    }
+
+    const mergeSortHelper = (arr, low, high) => {
+        if (low >= high) return;
+
+        let mid = Math.floor((low + high) / 2);
+        mergeSortHelper(arr, low, mid);
+        mergeSortHelper(arr, mid + 1, high);
+        merge(arr, low, mid, high);
+    }
+
+    mergeSortHelper(nums, 0, nums.length - 1);
+    return nums;
 }
 
 const input = [7, 4, 1, 5, 3];
