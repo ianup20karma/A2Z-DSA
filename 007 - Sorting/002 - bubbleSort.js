@@ -43,8 +43,8 @@ function bubbleSort(nums) {
 }
 
 const input = [7, 4, 1, 5, 3];
-const result = bubbleSort(input);
-console.log(`Sorted Array using Bubble Sort - [${result}]`);
+const result = bubbleSort([...input]);
+console.log(`Array [${input}] sorted using Bubble Sort - [${result}]`);
 
 
 // INTERVIEW FOLLOW UP QUESTIONS:
