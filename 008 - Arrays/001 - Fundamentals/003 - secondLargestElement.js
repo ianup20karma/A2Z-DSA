@@ -4,6 +4,10 @@
 // Given an array of integers nums, return the second-largest element in the array. 
 // If the second-largest element does not exist, return -1.
 
+// Input: nums = [8, 8, 7, 6, 5]
+// Output: 7
+// Explanation: The largest value in nums is 8, the second largest is 7
+
 // TIME COMPLEXITY: O(nlogn)
 // SPACE COMPLEXITY: O(1)
 function secondLargestElement(nums) {
@@ -23,6 +27,6 @@ function secondLargestElement(nums) {
     return secondLargest == -Infinity ? -1 : secondLargest;
 }
 
-const input = [3, 3, 0, 99, -40];
+const input = [8, 8, 7, 6, 5];
 const result = secondLargestElement(input);
 console.log(`Second Largest Element in ${input} is ${result}`);

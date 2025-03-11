@@ -3,6 +3,10 @@
 
 // Given an array of integers nums, return the value of the largest element in the array
 
+// Input: nums = [3, 3, 0, 99, -40]
+// Output: 99
+// Explanation: The largest element in array is 99
+
 // TIME COMPLEXITY: O(n)
 // SPACE COMPLEXITY: O(1)
 function largestElement(nums) {
