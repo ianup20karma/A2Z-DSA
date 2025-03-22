@@ -12,8 +12,7 @@
 
 // TIME COMPLEXITY: O(n), where n is the length of the array.
 // SPACE COMPLEXITY: O(1), extra space to store answer is not considered.
-function leaders(nums) {
-}
+function leaders(nums) {}
 
 const input = [1, 2, 5, 3, 1, 2];
 const result = leaders(input);
