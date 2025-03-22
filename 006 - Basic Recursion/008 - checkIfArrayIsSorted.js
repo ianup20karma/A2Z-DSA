@@ -25,4 +25,4 @@ function isSorted(nums) {
 
 const input = [1, 2, 3, 4, 5];
 const result = isSorted([...input]);
-console.log(`Array [${input}] is ${result ? "already" : "not"} sorted.`);
+console.log(`Array ${input} is ${result ? "already" : "not"} sorted.`);

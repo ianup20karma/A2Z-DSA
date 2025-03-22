@@ -15,4 +15,4 @@ function arraySum(nums, i = 0) {
 
 const input = [5, 8, 1];
 const result = arraySum(input);
-console.log(`Sum of elements in [${input}] is ${result}`);
+console.log(`Sum of elements in ${input} is ${result}`);

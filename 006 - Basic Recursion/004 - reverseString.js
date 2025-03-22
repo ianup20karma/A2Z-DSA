@@ -20,4 +20,4 @@ function reverseString(s) {
 
 const input = ["h", "e", "l", "l", "o"];
 const result = reverseString(input);
-console.log(`Reverse of [${input}] is [${result}]`);
+console.log(`Reverse of ${input} is ${result}`);

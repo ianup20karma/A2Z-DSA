@@ -29,4 +29,4 @@ function longestCommonPrefix(strs) {
 
 const input = ["flowers", "flow", "fly", "flight"];
 const result = longestCommonPrefix(input);
-console.log(`Longest Common Prefix in [${input}] is ${result ? result : "''"}`);
+console.log(`Longest Common Prefix in ${input} is ${result ? result : "''"}`);

@@ -10,9 +10,29 @@
 
 // TIME COMPLEXITY: O(m), where m is the length of that array which has less elements.
 // SPACE COMPLEXITY: O(1), extra space to store answer is not considered.
-function intersectionArray(nums) {}
+function intersectionArray(nums1, nums2) {
+    let i = 0, j = 0;
+    const intersection = [];
+
+    while (i < nums1.length && j < nums2.length) {
+        if (nums1[i] < nums2[j]) i++;
+        else if (nums1[i] > nums2[j]) j++;
+        else {
+            // When only unique elements are needed
+            // if (intersection.length === 0 || intersection[intersection.length - 1] !== nums1[i]) {
+            //     intersection.push(nums1[i]);
+            // }
+            // When duplicate elements should be preserved
+            intersection.push(nums1[i]);
+            i++;
+            j++;
+        }
+    }
+
+    return intersection;
+}
 
 const input1 = [1, 2, 2, 3, 5];
 const input2 = [1, 2, 7];
 const result = intersectionArray([...input1], [...input2]);
-console.log(`Intersection of array [${input1}] & [${input2}] is [${result}]`);
+console.log(`Intersection of array ${input1} & ${input2} is ${result}`);

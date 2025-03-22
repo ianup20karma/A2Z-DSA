@@ -31,4 +31,4 @@ function mostFrequentElement(nums) {
 
 const input = [4, 4, 5, 5, 6];
 const result = mostFrequentElement(input, 5);
-console.log(`Highest Occuring Element in Array [${input}] is ${result}`);
+console.log(`Highest Occuring Element in Array ${input} is ${result}`);

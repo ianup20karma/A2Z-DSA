@@ -29,4 +29,4 @@ function divisors(n) {
 
 const input = 8;
 const result = divisors(input);
-console.log(`Divisors of ${input} are [${result}]`);
+console.log(`Divisors of ${input} are ${result}`);

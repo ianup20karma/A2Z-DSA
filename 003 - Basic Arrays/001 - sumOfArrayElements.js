@@ -19,4 +19,4 @@ function sumOfElements(arr, n) {
 
 const input = [1, 2, 3, 4, 5];
 const result = sumOfElements(input, 5);
-console.log(`Sum of elements in array [${input}] is ${result}`);
+console.log(`Sum of elements in array ${input} is ${result}`);

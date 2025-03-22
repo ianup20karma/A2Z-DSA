@@ -21,4 +21,4 @@ function arraySortedOrNot(arr, n) {
 
 const input = [1, 2, 3, 4, 5];
 const result = arraySortedOrNot(input, 5);
-console.log(`Array [${input}] is ${result ? "Sorted" : "not Sorted"}`);
+console.log(`Array ${input} is ${result ? "Sorted" : "not Sorted"}`);

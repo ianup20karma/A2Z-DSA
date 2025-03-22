@@ -51,4 +51,4 @@ function rotateArray(nums, k) {
 const input1 = [3, 4, 1, 5, 3, -5];
 const input2 = 8;
 const result = rotateArray([...input1], input2);
-console.log(`Array [${input1}] after ${input2} rotation is [${result}]`);
+console.log(`Array ${input1} after ${input2} rotation is ${result}`);

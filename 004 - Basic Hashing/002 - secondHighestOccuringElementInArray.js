@@ -45,4 +45,4 @@ function secondMostFrequentElement(nums) {
 
 const input = [4, 4, 5, 5, 6, 7];
 const result = secondMostFrequentElement(input, 5);
-console.log(`Second Highest Occuring Element in Array [${input}] is ${result}`);
+console.log(`Second Highest Occuring Element in Array ${input} is ${result}`);

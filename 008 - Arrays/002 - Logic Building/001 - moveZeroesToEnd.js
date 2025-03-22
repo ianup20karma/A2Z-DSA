@@ -34,4 +34,4 @@ function moveZeroes(nums) {
 
 const input = [0, 1, 4, 0, 5, 2];
 const result = moveZeroes([...input]);
-console.log(`Array [${input}] after moving zeroes to the end - [${result}]`);
+console.log(`Array ${input} after moving zeroes to the end - ${result}`);

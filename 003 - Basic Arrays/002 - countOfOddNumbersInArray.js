@@ -19,4 +19,4 @@ function countOdd(arr, n) {
 
 const input = [1, 2, 3, 4, 5];
 const result = countOdd(input, 5);
-console.log(`Count of Odd numbers in array [${input}] is ${result}`);
+console.log(`Count of Odd numbers in array ${input} is ${result}`);

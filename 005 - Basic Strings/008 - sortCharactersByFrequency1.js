@@ -34,4 +34,4 @@ function frequencySort(s) {
 
 const input = "tree";
 const result = frequencySort(input);
-console.log(`Sorted characters by frequency in ${input} is [${result}]`);
+console.log(`Sorted characters by frequency in ${input} is ${result}`);
