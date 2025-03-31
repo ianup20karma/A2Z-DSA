@@ -12,7 +12,22 @@
 
 // TIME COMPLEXITY: O(n), where n is the length of the array.
 // SPACE COMPLEXITY: O(1), extra space to store answer is not considered.
-function leaders(nums) {}
+function leaders(nums) {
+    const ans = [];
+    if (nums.length === 0) return ans;
+
+    let max = nums[nums.length - 1];
+    ans.push(max);
+
+    for (let i = nums.length - 2; i >= 0; i--) {
+        if (nums[i] > max) {
+            ans.push(nums[i]);
+            max = nums[i];
+        }
+    }
+
+    return ans.reverse();
+}
 
 const input = [1, 2, 5, 3, 1, 2];
 const result = leaders(input);

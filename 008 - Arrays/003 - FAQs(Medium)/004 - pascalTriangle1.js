@@ -21,6 +21,36 @@
 // TIME COMPLEXITY: O(c), where C is the column number. This is because the loop in the nCr function runs for a total of C times, where C can be as large as N/2.
 // SPACE COMPLEXITY: O(1), as no extra space is used.
 function pascalTriangleI(r, c) {
+    // BRUTE FORCE
+    // factorial(n) {
+    //   if (n === 0 || n === 1) return 1;
+    //   let result = 1;
+
+    //   for (let i = 2; i <= n; i++) {
+    //     result *= i;
+    //   }
+
+    //   return result;
+    // }
+
+    // pascalTriangleI(r, c) {
+    //   return factorial(n) / (factorial(r) * factorial(n - r));
+    // }
+
+    const nCr = (n, r) => {
+        if (r > n - r) r = n - r;
+        if (r === 1) return n;
+
+        let res = 1;
+        for (let i = 0; i < r; i++) {
+            res = res * (n - i);
+            res = res / (i + 1);
+        }
+
+        return res;
+    }
+
+    return nCr(r - 1, c - 1);
 }
 
 const input1 = 4;
