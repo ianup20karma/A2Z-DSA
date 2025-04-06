@@ -104,5 +104,5 @@ function threeSum(nums) {
 }
 
 const input = [2, -2, 0, 3, -3, 5];
-const result = threeSum(input);
+const result = threeSum([ ...input ]);
 console.log('All Triplets whose sum is 0', 'in', input, 'are', result);

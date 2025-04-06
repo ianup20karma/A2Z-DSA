@@ -19,28 +19,99 @@
 // No extra space is used to solve this problem. So, from that perspective, space complexity can be written as O(1).
 function fourSum(nums, target) {
     // BRUTE FORCE:
-    // TIME COMPLEXITY:	O(N4) for using 4 nested loops, where N is size of the array.
-    // SPACE COPLEXITY: O(2 x no. of the quadruplets), for using a set data structure and a list to store the quads.
-    const resultSet = new Set();
+    // TIME COMPLEXITY:	O(n^4) for using 4 nested loops, where N is size of the array.
+    // SPACE COPLEXITY: O(2 * m) where m = no. of the quadruplets, for using a set data structure and a list to store the quads.
+
+    // const resultSet = new Set();
+    // const n = nums.length;
+
+    // for (let i = 0; i < n; i++) {
+    //     for (let j = 0; j < n; j++) {
+    //         for (let k = 0; k < n; k++) {
+    //             for (let l = 0; l < n; l++) {
+    //                 if (i !== j && i !== k && i !== l && j !== k && j !== l && k !== l) {
+    //                     const sum = nums[i] + nums[j] + nums[k] + nums[l];
+    
+    //                     if (sum === target) {
+    //                         const temp = [nums[i], nums[j], nums[k], nums[l]];
+    //                         temp.sort((a, b) => a - b);
+    //                         resultSet.add(temp.join(','));
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // const ans = Array.from(resultSet).map(item => item.split(',').map(Number));
+    // return ans;
+
+
+
+    // OPTIMIZED:
+    // TIME COMPLEXITY: O(n^3)
+    // SPACE COMPLEXITY: O(n + m), where m = number of unique quadruplets
+
+    // const n = nums.length;
+    // const quadSet = new Set();
+
+    // for (let i = 0; i < n; i++) {
+    //     for (let j = i + 1; j < n; j++) {
+    //         const hashset = new Set();
+    //         for (let k = j + 1; k < n; k++) {
+    //             const sum = nums[i] + nums[j] + nums[k];
+    //             const fourth = target - sum;
+
+    //             if (hashset.has(fourth)) {
+    //                 const temp = [nums[i], nums[j], nums[k], fourth];
+    //                 temp.sort( (a, b) => a - b);
+    //                 quadSet.add(temp.join());
+    //             }
+
+    //             hashset.add(nums[k]);
+    //         }
+    //     }
+    // }
+
+    // const ans = Array.from(quadSet).map(quad => quad.split(',').map(Number))
+    // return ans;
+
+    // OPTIMAL (Fastest and cleanest):
+    // TIME COMPLEXITY: O(n²)
+    // SPACE COMPLEXITY: O(1)
+    const ans = [];
     const n = nums.length;
+    nums.sort((a, b) => a - b);
 
     for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            for (let k = 0; k < n; k++) {
-                for (let l = 0; l < n; l++) {
-                    const sum = nums[i] + nums[j] + nums[k] + nums[l];
+        if (i > 0 && nums[i] === nums[i - 1]) continue; // Skip duplicates
+        
+        for (let j = i + 1; j < n; j++) {
+            if (j > i + 1 && nums[j] === nums[j - 1]) continue; // Skip duplicates
+            
+            let k = j + 1;
+            let l = n - 1;
 
-                    if (sum === target) {
-                        const temp = [nums[i], nums[j], nums[k], nums[l]];
-                        temp.sort((a, b) => a - b);
-                        resultSet.add(temp.join(','));
-                    }
+            while(k < l) {
+                const sum = nums[i] + nums[j] + nums[k] + nums[l];
+
+                if (sum < target) {
+                    k++;
+                } else if (sum > target) {
+                    l--;
+                } else {
+                    ans.push([nums[i], nums[j], nums[k], nums[l]]);
+
+                    // Skip duplicates
+                    k++;
+                    l--;
+                    while (k < l && nums[k] === nums[k + 1]) k++;
+                    while (k < l && nums[l] === nums[l - 1]) l--;
                 }
             }
         }
     }
 
-    const ans = Array.from(resultSet).map(item => item.split(',').map(Number));
     return ans;
 }
 
