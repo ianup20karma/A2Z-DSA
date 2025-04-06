@@ -22,3 +22,20 @@ const input1 = [2, 3, 4, 5, 3];
 const input2 = 3;
 const result = linearSearch(input1, input2);
 console.log('Index of', input2, 'in', input1, 'is', result, 'using Linear Search');
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you modify the function to return all indices of the target instead of just the smallest?
+    // To return all indices: Traverse the array completely, even after finding the first occurrence. 
+    // Use a list to store indices of all occurrences of the target.
+
+    // Example:
+    // nums = [1, 2, 3, 2, 4], target = 2
+    // Output: [1, 3]
+
+// How can linear search be optimized for specific scenarios?
+    // Linear search can be optimized for: If a specific target appears frequently, 
+    // keep track of its last found index to start the search from there in subsequent searches. 
+    // If the array is partially sorted or has a specific pattern, consider stopping early when certain conditions are met.

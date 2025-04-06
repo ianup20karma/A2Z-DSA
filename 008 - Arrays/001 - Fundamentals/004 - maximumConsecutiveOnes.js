@@ -27,3 +27,24 @@ function findMaxConsecutiveOnes(nums) {
 const input = [1, 1, 0, 0, 1, 1, 1, 0];
 const result = findMaxConsecutiveOnes(input);
 console.log('Maximum Consecutive Ones in', input, 'is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you modify the algorithm to return the indices of the maximum segment of consecutive 1s?
+    // Track the starting index of each segment of consecutive 1s. 
+    // Update the start and end indices whenever a new maximum is found.
+
+    // Example:
+    // nums = [1, 1, 0, 1, 1, 1, 0]
+    // Output: Indices (3, 5)
+
+
+// How would you handle a streaming input (data arriving one bit at a time)?
+    // For streaming data, maintain a running count of consecutive 1s and update the maximum whenever a 0 is encountered. 
+    // Use a single variable to track the current count. Update the maximum count dynamically without storing the full array.
+
+    // Example:
+    // [1, 1, 0, 1, 1, 1, 0]
+    // Output after processing: 3

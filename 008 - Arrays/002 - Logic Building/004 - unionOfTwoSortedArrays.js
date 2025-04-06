@@ -51,3 +51,21 @@ const input1 = [1, 2, 3, 4, 5];
 const input2 = [1, 2, 7];
 const result = unionArray([...input1], [...input2]);
 console.log('Union of array', input1, '&', input2, 'is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle unsorted input arrays?
+    // If the input arrays are unsorted:
+    // Sort each array first O ( mlogm ) and O ( nlogn )).
+    // Apply the two-pointer approach or merge logic.
+    // This approach would have an overall time complexity of O ( mlogm+nlogn+m+n ).
+
+
+// How would you extend this to handle k sorted arrays?
+    // To handle k sorted arrays:
+    // Use a min-heap to merge the arrays.
+    // Push the smallest element of each array into the heap.
+    // Extract the minimum element, add it to the result, and push the next element from the same array into the heap.
+    // This has a time complexity of O ( Nlogk ), where N is the total number of elements.

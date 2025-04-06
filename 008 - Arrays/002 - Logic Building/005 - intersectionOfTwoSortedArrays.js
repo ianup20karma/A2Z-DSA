@@ -36,3 +36,12 @@ const input1 = [1, 2, 2, 3, 5];
 const input2 = [1, 2, 7];
 const result = intersectionArray([...input1], [...input2]);
 console.log('Intersection of array', input1, '&', input2, 'is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle unsorted arrays?
+    // For unsorted arrays:
+    // Sort both arrays first O ( mlogm+nlogn ).
+    // Apply the two-pointer technique to find the intersection.

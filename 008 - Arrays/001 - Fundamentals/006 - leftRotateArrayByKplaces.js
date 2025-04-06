@@ -52,3 +52,17 @@ const input1 = [3, 4, 1, 5, 3, -5];
 const input2 = 8;
 const result = rotateArray([...input1], input2);
 console.log('Array', input1, 'after', input2, 'rotation is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// Can this logic be extended to multidimensional arrays?
+    // Yes, but for 2D arrays (e.g., matrices), rotation involves more complex transformations:
+    //     For left rotation, each row/column is treated as a separate 1D array and rotated individually.
+    //     For k>1, the process must account for overlapping boundaries in 2D structures.
+
+// What’s the difference between rotation by k and shuffling?
+    // Rotation shifts elements in a structured, cyclic order, preserving their relative positions. 
+    // Shuffling, on the other hand, rearranges elements randomly without preserving order. 
+    // Rotation is deterministic, whereas shuffling introduces randomness.

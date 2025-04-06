@@ -106,3 +106,16 @@ function threeSum(nums) {
 const input = [2, -2, 0, 3, -3, 5];
 const result = threeSum([ ...input ]);
 console.log('All Triplets whose sum is 0', 'in', input, 'are', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// What if the input array is unsorted?
+    // Sorting is part of the solution and is necessary for efficient implementation. 
+    // It adds O ( nlogn ) complexity, which is negligible compared to the O ( n2 ) time required for finding triplets.
+
+// How would you modify the algorithm to find all unique triplets with a sum equal to a different target?
+    // Instead of finding triplets that sum to 0:
+    // Look for triplets that sum to a given target t.
+    // Use the same two-pointer approach, with nums[left]+nums[right]=t−nums[i].

@@ -32,3 +32,17 @@ function leaders(nums) {
 const input = [1, 2, 5, 3, 1, 2];
 const result = leaders(input);
 console.log('Leaders in array', input, 'are', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle an unsorted list with duplicate elements?
+    // The presence of duplicate elements does not change the logic. 
+    // The algorithm still traverses from right to left and checks if the current element is greater than the maximum seen so far. 
+    // Only elements that strictly satisfy this condition are added to the leader list.
+
+
+// What if the array is circular?
+    // For a circular array, you would need to iterate over the array twice (once normally and once wrapping around). 
+    // Adjust the comparison logic to handle the circular property, ensuring no duplicates are considered as leaders.

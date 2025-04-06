@@ -25,3 +25,17 @@ function rotateArrayByOne(nums) {
 const input = [1, 2, 3, 4, 5];
 const result = rotateArrayByOne([...input]);
 console.log('Array', input, 'after one rotation is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would the algorithm handle multidimensional arrays?
+    // For multidimensional arrays (e.g., matrices), rotation involves more complex transformations:
+    //     Shifting rows or columns depending on the axis of rotation.
+    //     Similar logic but reversed.
+
+// What is the difference between in-place rotation and using extra space?
+    // Rearranges elements directly in the original array without using additional memory. 
+    //     It is more space-efficient but often requires more careful handling of indices.
+    // Creates a temporary array to hold shifted elements, simplifying the process but increasing memory usage.

@@ -51,3 +51,19 @@ function missingNumber(nums) {
 const input = [0, 1, 2, 4, 5, 6];
 const result = missingNumber([...input]);
 console.log('Missing number in', input, 'is', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle the problem if duplicates are allowed in the array?
+    // If duplicates are allowed:
+    // Use a hash set to track numbers present in the array.
+    // Iterate through 0 to n, checking if each number exists in the set.
+    // This approach requires O ( n ) time and O ( n ) space.
+
+
+// How does the performance compare between the sum formula and XOR methods?
+    // Both methods have O ( n ) time complexity and O ( 1 ) space complexity.
+    // The sum formula involves addition and subtraction, while the XOR method uses bitwise operations. 
+    // XOR is slightly faster in practice due to the lower computational cost of bitwise operations.

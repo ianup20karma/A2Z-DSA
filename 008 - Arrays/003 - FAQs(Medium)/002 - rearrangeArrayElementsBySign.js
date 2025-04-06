@@ -33,3 +33,12 @@ function rearrangeArray(nums) {
 const input = [2, 4, 5, -1, -3, -4];
 const result = rearrangeArray(input);
 console.log('Array', input, 'after re-arrangements by sign -', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you modify the algorithm to handle uneven counts of positives and negatives?
+    // If the counts are uneven:
+    // Fill the result array with as many alternating pairs as possible.
+    // Append the remaining elements (all positives or all negatives) to the end of the result array while preserving their order.

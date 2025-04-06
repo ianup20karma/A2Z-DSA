@@ -29,3 +29,12 @@ function removeDuplicates(nums) {
 const input = [-2, 2, 4, 4, 4, 4, 5, 5];
 const result = removeDuplicates([...input]);
 console.log('Array', input, 'after removing duplicates -', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would the solution change if the array was not sorted?
+    // If the array was unsorted, the sorted property could not be used to identify duplicates in one pass. Instead:
+    // Sort the array first (O ( nlogn )), then apply the two-pointer technique.
+    // Alternatively, use a hash set to track seen elements, but this would require O ( n ) extra space.

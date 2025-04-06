@@ -53,3 +53,18 @@ function spiralOrder(matrix) {
 const input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 const result = spiralOrder(input);
 console.log('Matrix', input, 'in spiral manner -', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle a sparse matrix?
+    // For sparse matrices:
+    // Use a coordinate-based approach to track only non-zero elements.
+    // Perform the traversal using the coordinates of active elements instead of iterating through every cell.
+
+// How would you modify the algorithm for counterclockwise spiral traversal?
+    // To traverse counterclockwise: Start with the left column (top to bottom).
+    // Traverse the bottom row (right to left).
+    // Traverse the right column (bottom to top).
+    // Traverse the top row (left to right).

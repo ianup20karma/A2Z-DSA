@@ -119,3 +119,11 @@ const input1 = [1, -2, 3, 5, 7, 9];
 const input2 = 7;
 const result = fourSum(input1, input2);
 console.log('All Quadruplets whose sum is', input2, 'in', input1, 'are', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// What if the input array is unsorted?
+    // Sorting is part of the solution and is necessary for efficient implementation. 
+    // Sorting adds O ( nlogn ) complexity, which is manageable compared to O ( n^3 ).

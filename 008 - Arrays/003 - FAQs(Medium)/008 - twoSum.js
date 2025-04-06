@@ -58,3 +58,16 @@ const input1 = [1, 6, 2, 10, 3];
 const input2 = 7;
 const result = twoSum(input1, input2);
 console.log('Indices of the sum', input2, 'in array', input1, 'are', result);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you handle multiple solutions?
+    // If multiple solutions are allowed:
+    // Continue moving the pointers inward even after finding a valid pair.
+    // Store all valid pairs in a result list.
+
+// How would you return the original indices after sorting?
+    // While sorting, store the original indices as tuples (e.g., [(value, index)]). 
+    // Use the sorted array to find the solution, and then map the indices back to their original positions.
