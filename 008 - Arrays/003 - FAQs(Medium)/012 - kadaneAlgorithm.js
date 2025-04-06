@@ -30,8 +30,8 @@ function maxSubArray(nums) {
 }
 
 const input1 = [2, 3, 5, -2, 7, -4];
-const result1 = maxSubArray(input);
-console.log(`The largest sum in a subarray = ${result1}`);
+const result1 = maxSubArray(input1);
+console.log('The largest sum in a subarray of', input1, 'is', result1);
 
 // FOLLOW UP QUESTION
 // Can you print the subarray that has the max sum ?
@@ -74,3 +74,17 @@ function maxSumSubArray(nums) {
 
 const input2 = [2, 3, 5, -2, 7, -4];
 const result2 = maxSumSubArray(input2);
+
+
+// INTERVIEW FOLLOW UP QUESTIONS:
+// ------------------------------
+
+// How would you generalize this to find the largest subarray sum for 2D arrays (matrices)?
+    // For a 2D matrix:
+    // Use Kadane’s algorithm on each possible submatrix.
+    // Iterate over row pairs, calculating the sum of elements in each submatrix and applying Kadane’s algorithm to find the largest subarray sum.
+
+// How would you modify Kadane’s algorithm to return the actual subarray?
+    // Track the start and end indices of the maximum subarray:
+    // When starting a new subarray (currentMax = nums[i]), record the start index.
+    // Update the end index when globalMax is updated.
