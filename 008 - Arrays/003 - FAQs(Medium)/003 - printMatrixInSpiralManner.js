@@ -52,4 +52,4 @@ function spiralOrder(matrix) {
 
 const input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 const result = spiralOrder(input);
-console.log(`Matrix ${input} in spiral manner - ${result}`);
+console.log('Matrix', input, 'in spiral manner -', result);

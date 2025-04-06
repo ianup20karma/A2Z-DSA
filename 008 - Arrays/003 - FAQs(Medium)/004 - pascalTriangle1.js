@@ -56,4 +56,4 @@ function pascalTriangleI(r, c) {
 const input1 = 4;
 const input2 = 2;
 const result = pascalTriangleI(input1, input2);
-console.log(`Value at row ${input1} & column ${input2} in Pascal's Triangle is ${result}`);
+console.log("Value at row", input1, "& column", input2, "in Pascal's Triangle is", result);

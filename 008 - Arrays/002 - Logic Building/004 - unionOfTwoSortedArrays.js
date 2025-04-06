@@ -50,4 +50,4 @@ function unionArray(nums1, nums2) {
 const input1 = [1, 2, 3, 4, 5];
 const input2 = [1, 2, 7];
 const result = unionArray([...input1], [...input2]);
-console.log(`Union of array ${input1} & ${input2} is ${result}`);
+console.log('Union of array', input1, '&', input2, 'is', result);

@@ -37,7 +37,7 @@ function selectionSort(nums) {
 
 const input = [7, 4, 1, 5, 3];
 const result = selectionSort([...input]);
-console.log(`Array ${input} sorted using Selection Sort - ${result}`);
+console.log('Array', input, 'sorted using Selection Sort -', result);
 
 
 // INTERVIEW FOLLOW UP QUESTIONS:

@@ -28,4 +28,4 @@ function removeDuplicates(nums) {
 
 const input = [-2, 2, 4, 4, 4, 4, 5, 5];
 const result = removeDuplicates([...input]);
-console.log(`Array ${input} after removing duplicates - ${result}`);
+console.log('Array', input, 'after removing duplicates -', result);

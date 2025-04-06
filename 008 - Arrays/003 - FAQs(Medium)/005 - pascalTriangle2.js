@@ -27,4 +27,4 @@ function pascalTriangleII(r) {
 
 const input = 4;
 const result = pascalTriangleII(input);
-console.log(`${input}th row in Pascal's Triangle is ${result}`);
+console.log(input, "th row in Pascal's Triangle is", result);

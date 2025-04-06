@@ -31,4 +31,4 @@ function leaders(nums) {
 
 const input = [1, 2, 5, 3, 1, 2];
 const result = leaders(input);
-console.log(`Leaders in array ${input} are ${result}`);
+console.log('Leaders in array', input, 'are', result);

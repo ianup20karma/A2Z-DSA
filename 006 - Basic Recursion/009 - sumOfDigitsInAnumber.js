@@ -27,4 +27,4 @@ function addDigits(num) {
 
 const input = 529;
 const result = addDigits(input);
-console.log(`Sum of digits in ${input} is ${result}`);
+console.log('Sum of digits in', input, 'is', result);

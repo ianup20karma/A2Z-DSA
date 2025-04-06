@@ -19,4 +19,4 @@ function reverse(arr, n) {
 
 const input = [1, 2, 3, 4, 5];
 const result = reverse(input, 5);
-console.log(`Reverse of array ${input} is ${result}`);
+console.log('Reverse of array', input, 'is', result);

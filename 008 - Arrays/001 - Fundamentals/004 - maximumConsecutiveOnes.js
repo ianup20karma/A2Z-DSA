@@ -26,4 +26,4 @@ function findMaxConsecutiveOnes(nums) {
 
 const input = [1, 1, 0, 0, 1, 1, 1, 0];
 const result = findMaxConsecutiveOnes(input);
-console.log(`Maximum Consecutive Ones in ${input} is ${result}`);
+console.log('Maximum Consecutive Ones in', input, 'is', result);

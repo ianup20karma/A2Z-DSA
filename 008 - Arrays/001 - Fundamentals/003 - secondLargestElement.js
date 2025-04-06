@@ -29,4 +29,4 @@ function secondLargestElement(nums) {
 
 const input = [8, 8, 7, 6, 5];
 const result = secondLargestElement(input);
-console.log(`Second Largest Element in ${input} is ${result}`);
+console.log('Second Largest Element in', input, 'is', result);

@@ -19,4 +19,4 @@ function largestElement(nums) {
 
 const input = [3, 3, 0, 99, -40];
 const result = largestElement(input);
-console.log(`Largest Element in ${input} is ${result}`);
+console.log('Largest Element in', input, 'is', result);

@@ -25,5 +25,5 @@ function countDigit(n) {
 }
 
 const input = 56721;
-const result = countDigit(inputForCountDigit);
-console.log(`Total Digits in ${inputForCountDigit} -`, result);
+const result = countDigit(input);
+console.log(`Total Digits in ${input} -`, result);

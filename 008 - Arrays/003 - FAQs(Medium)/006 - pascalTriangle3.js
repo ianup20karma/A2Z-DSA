@@ -25,4 +25,4 @@ function pascalTriangleIII(n) {
 
 const input = 4;
 const result = pascalTriangleIII(input);
-console.log(`Pascal's Triangle upto ${input}th level is ${result}`);
+console.log("Pascal's Triangle upto", input, "th level is", result);

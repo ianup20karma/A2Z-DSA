@@ -27,4 +27,4 @@ function sumHighestAndLowestFrequency(nums) {
 
 const input = [4, 4, 5, 5, 6, 7];
 const result = sumHighestAndLowestFrequency(input, 5);
-console.log(`Sum of Highest & Lowest Element's Frequency in Array ${input} is ${result}`);
+console.log("Sum of Highest & Lowest Element's Frequency in Array", input, 'is', result);

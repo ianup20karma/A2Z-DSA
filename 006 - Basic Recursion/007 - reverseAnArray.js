@@ -20,4 +20,4 @@ function reverseArray(nums) {
 
 const input = [1, 2, 3, 4, 5];
 const result = reverseArray([ ...input ]);
-console.log(`Reverse of array ${input} is ${result}`);
+console.log('Reverse of array', input, 'is', result);

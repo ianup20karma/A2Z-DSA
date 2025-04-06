@@ -21,4 +21,4 @@ function linearSearch(nums, target) {
 const input1 = [2, 3, 4, 5, 3];
 const input2 = 3;
 const result = linearSearch(input1, input2);
-console.log(`Index of ${input2} in ${input1} is ${result} using Linear Search`);
+console.log('Index of', input2, 'in', input1, 'is', result, 'using Linear Search');

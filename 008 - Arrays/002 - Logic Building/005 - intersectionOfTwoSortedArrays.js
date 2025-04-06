@@ -35,4 +35,4 @@ function intersectionArray(nums1, nums2) {
 const input1 = [1, 2, 2, 3, 5];
 const input2 = [1, 2, 7];
 const result = intersectionArray([...input1], [...input2]);
-console.log(`Intersection of array ${input1} & ${input2} is ${result}`);
+console.log('Intersection of array', input1, '&', input2, 'is', result);

@@ -19,4 +19,4 @@ function checkPrime(num, x = 2) {
 
 const input = 5;
 const result = checkPrime(input);
-console.log(`${input} is ${result ? "a" : "not a"} Prime number.`);
+console.log(input, 'is', result ? 'a' : 'not a', 'Prime number.');

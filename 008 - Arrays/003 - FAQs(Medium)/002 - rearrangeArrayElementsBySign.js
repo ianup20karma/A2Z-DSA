@@ -32,4 +32,4 @@ function rearrangeArray(nums) {
 
 const input = [2, 4, 5, -1, -3, -4];
 const result = rearrangeArray(input);
-console.log(`Array ${input} after re-arrangements by sign - ${result}`);
+console.log('Array', input, 'after re-arrangements by sign -', result);

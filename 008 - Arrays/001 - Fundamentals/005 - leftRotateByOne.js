@@ -24,4 +24,4 @@ function rotateArrayByOne(nums) {
 
 const input = [1, 2, 3, 4, 5];
 const result = rotateArrayByOne([...input]);
-console.log(`Array ${input} after one rotation is ${result}`);
+console.log('Array', input, 'after one rotation is', result);

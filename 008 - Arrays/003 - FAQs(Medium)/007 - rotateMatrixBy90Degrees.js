@@ -14,4 +14,4 @@ function rotateMatrix(matrix) {
 
 const input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 const result = rotateMatrix(structuredClone(input));
-console.log(`Matrix ${input} after 90 degree rotation - ${result}`);
+console.log('Matrix', input, 'after 90 degree rotation -', result);

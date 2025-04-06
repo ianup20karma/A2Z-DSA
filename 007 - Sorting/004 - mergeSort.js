@@ -64,7 +64,7 @@ function mergeSort(nums) {
 
 const input = [7, 4, 1, 5, 3];
 const result = mergeSort([...input]);
-console.log(`Array ${input} sorted using Merge Sort - ${result}`);
+console.log('Array', input, 'sorted using Merge Sort -', result);
 
 
 // INTERVIEW FOLLOW UP QUESTIONS:

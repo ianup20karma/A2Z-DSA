@@ -23,4 +23,4 @@ function fib(n) {
 
 const input = 3;
 const result = fib(input);
-console.log(`Fibonacci Number at ${input} position is ${result}`);
+console.log('Fibonacci Number at', input, 'position is', result);

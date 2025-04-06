@@ -16,4 +16,4 @@ function factorial(n) {
 
 const input = 5;
 const result = factorial(input);
-console.log(`Factorial of ${input} is ${result}`);
+console.log('Factorial of', input, 'is', result);

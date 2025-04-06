@@ -57,4 +57,4 @@ function twoSum(nums, target) {
 const input1 = [1, 6, 2, 10, 3];
 const input2 = 7;
 const result = twoSum(input1, input2);
-console.log(`Indices of the sum ${input2} in array ${input1} are ${result}`);
+console.log('Indices of the sum', input2, 'in array', input1, 'are', result);

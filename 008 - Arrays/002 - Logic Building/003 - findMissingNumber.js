@@ -50,4 +50,4 @@ function missingNumber(nums) {
 
 const input = [0, 1, 2, 4, 5, 6];
 const result = missingNumber([...input]);
-console.log(`Missing number in ${input} is ${result}`);
+console.log('Missing number in', input, 'is', result);

@@ -16,4 +16,4 @@ function NnumbersSum(N) {
 
 const input = 4;
 const result = NnumbersSum(input);
-console.log(`Sum of numbers till ${input} is ${result}`);
+console.log('Sum of numbers till', input, 'is', result);

@@ -17,9 +17,92 @@
 // And both the pointers j and k combined can run for approximately N times including the operation of skipping duplicates. 
 // So the total time complexity will be O(N2).
 // SPACE COMPLEXITY: O(1), no extra space is used.
-function threeSum(n) {
+function threeSum(nums) {
+    // BRUTE FORCE:
+    // TIME COMPLEXITY:	O(n³)
+    // SPACE COPLEXITY: O(m), where m = number of unique triplets (at most O(n³) in worst case, but generally much smaller)
+    // const tripletSet = new Set();
+    // const n = nums.length;
+
+    // for (let i = 0; i < n - 2; i++) {
+    //     for (let j = i + 1; j < n - 1; j++) {
+    //         for (let k = j + 1; k < n; k++) {
+    //             if (nums[i] + nums[j] + nums[k] === 0) {
+    //                 const temp = [nums[i], nums[j], nums[k]];
+    //                 temp.sort((a, b) => a - b);
+    //                 tripletSet.add(temp.join(','));
+    //             }
+    //         }
+    //     }
+    // }
+
+    // let ans = Array.from(tripletSet).map(triplet => triplet.split(',').map(num => parseInt(num)));
+    // return ans;
+
+
+
+    // OPTIMIZED:
+    // TIME COMPLEXITY: O(n²)
+    // SPACE COMPLEXITY: O(n + m), where m = number of unique triplets
+    // In the earlier solution, they used temp.join(',') to convert arrays to comma strings, 
+    // which works — but it's more error-prone than JSON.stringify(), especially for negative or multi-digit numbers. 
+    // So JSON.stringify() is more robust and semantically cleaner.
+    // const tripletSet = new Set();
+    // const n = nums.length;
+
+    // for (let i = 0; i < n; i++) {
+    //     const hashset = new Set();
+    //     for (let j = i + 1; j < n; j++) {
+    //         const third = -(nums[i] + nums[j]);
+    //         if (hashset.has(third)) {
+    //             const temp = [nums[i], nums[j], third];
+    //             temp.sort((a, b) => a - b);
+    //             tripletSet.add(JSON.stringify(temp));
+    //         } else {
+    //             hashset.add(nums[j]);
+    //         }
+    //     }
+    // }
+    // const ans = Array.from(tripletSet).map(triplet => JSON.parse(triplet));
+    // return ans;
+
+
+
+    // OPTIMAL (Fastest and cleanest):
+    // TIME COMPLEXITY: O(n²)
+    // SPACE COMPLEXITY: O(1)
+    const ans = [];
+    const n = nums.length;
+    nums.sort((a, b) => a - b);
+
+    for (let i = 0; i < n; i++) {
+        if (i > 0 && nums[i] === nums[i - 1]) continue; // Skip duplicates
+
+        let j = i + 1;
+        let k = n - 1;
+
+        while (j < k) {
+            const sum = nums[i] + nums[j] + nums[k];
+
+            if (sum < 0) {
+                j++;
+            } else if (sum > 0) {
+                k--;
+            } else {
+                ans.push([nums[i], nums[j], nums[k]]);
+
+                // Skip duplicates
+                j++;
+                k--;
+                while(j < k && nums[j] === nums[j - 1]) j++;
+                while(j < k && nums[k] === nums[k + 1]) k--;
+            }
+        }
+    }
+
+    return ans;
 }
 
 const input = [2, -2, 0, 3, -3, 5];
 const result = threeSum(input);
-console.log(`All Triplets whose sum is 0 in ${input} are ${result}`);
+console.log('All Triplets whose sum is 0', 'in', input, 'are', result);

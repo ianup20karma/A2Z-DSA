@@ -22,4 +22,4 @@ function palindromeCheck(s) {
 
 const input = "hannah";
 const result = palindromeCheck(input);
-console.log(`${input} is ${result ? "a Palindrome" : "not a Palindrome"}`);
+console.log(input, 'is', result ? 'a Palindrome' : 'not a Palindrome');
