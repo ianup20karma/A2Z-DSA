@@ -10,6 +10,21 @@
 // TIME COMPLEXITY: O(N2) +O(N2), to linearly iterate and find transpose of the matrix and another O(N2) to find the reverse of each row.
 // SPACE COMPLEXITY: O(1), as no extra space is being used.
 function rotateMatrix(matrix) {
+    let n = matrix.length;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < i; j++) {
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+        }
+    }
+    
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < Math.floor(n / 2); j++) {
+            [matrix[i][j], matrix[i][n - 1 - j]] = [matrix[i][n - 1 - j], matrix[i][j]];
+        }
+    }
+
+    return matrix;
 }
 
 const input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];

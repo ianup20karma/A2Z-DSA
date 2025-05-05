@@ -21,6 +21,27 @@
 // TIME COMPLEXITY: O(N^2), generating each row takes linear time relative to its size, and there are N rows, leading to a total time complexity of O(N^2).
 // SPACE COMPLEXITY: O(N^2), storing the entire Pascal's Triangle requires space proportional to the sum of the first N natural numbers, resulting in O(N^2) space complexity.
 function pascalTriangleIII(n) {
+    const generateRow = (row) => {
+        let ans = 1;
+        let ansRow = [];
+        ansRow.push(1);
+
+        for (let col = 1; col < row; col++) {
+            ans = ans * (row - col);
+            ans = ans / col;
+            ansRow.push(ans);
+        }
+        
+        return ansRow;
+    }
+
+    let pascalTriangle = [];
+
+    for (let row = 1; row <= n; row++) {
+        pascalTriangle.push(generateRow(row));
+    }
+
+    return pascalTriangle;
 }
 
 const input = 4;

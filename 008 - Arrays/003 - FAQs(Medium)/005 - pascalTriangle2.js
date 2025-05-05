@@ -23,6 +23,15 @@
 // SPACE COMPLEXITY: O(1), as no extra space is used.
 // Note that if the space used to return the row is considered, the space complexity will be O(R) as the space used to store the row is proportional to the row number.
 function pascalTriangleII(r) {
+    let ans = new Array(r).fill(0);
+
+    ans[0] = 1;
+
+    for (let i = 1; i < r; i++) {
+        ans[i] = (ans[i - 1] * (r - i)) / i;
+    }
+
+    return ans;
 }
 
 const input = 4;
